@@ -67,10 +67,11 @@ Mount the source code `generate_files.py` into a container to try out changes wi
 
 ```shell
 DIR=output&&docker run --rm -it --userns=host -u $(id -u):$(id -g) \
- -v $PWD/generate_files.py:/usr/local/lib/python3.10/site-packages/generate_files.py:ro \ 
- -v $PWD/img:/img:ro -v $PWD/$DIR:/$DIR:rw localhost/fnndsc/pl-generatefiles generate_files /img /$DIR
+ -v $PWD/generate_files.py:/usr/local/lib/python3.10/site-packages/generate_files.py:ro \
+-v $PWD/img:/img:ro -v $PWD/$DIR:/$DIR:rw localhost/fnndsc/pl-generatefiles generate_files /img /$DIR
 ```
 
+<!--
 ### Testing
 
 Run unit tests using `pytest`.
@@ -81,6 +82,7 @@ Use the option `--build-arg extras_require=dev` to install extra dependencies fo
 docker build -t localhost/fnndsc/pl-generatefiles:dev --build-arg extras_require=dev .
 docker run --rm -it localhost/fnndsc/pl-generatefiles:dev pytest
 ```
+-->
 
 ## Release
 
@@ -100,6 +102,7 @@ docker build -t docker.io/fnndsc/pl-generatefiles:1.2.3 .
 docker push docker.io/fnndsc/pl-generatefiles:1.2.3
 ```
 
+<!--
 ### Get JSON Representation
 
 Run [`chris_plugin_info`](https://github.com/FNNDSC/chris_plugin#usage)
@@ -108,4 +111,4 @@ to produce a JSON description of this plugin, which can be uploaded to a _ChRIS 
 ```shell
 docker run --rm localhost/fnndsc/pl-generatefiles:dev chris_plugin_info > chris_plugin_info.json
 ```
-
+-->
