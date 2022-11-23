@@ -110,5 +110,5 @@ to produce a JSON description of this plugin, which can be uploaded to a _ChRIS 
 
 ```shell
 docker run --rm localhost/fnndsc/pl-generatefiles:dev chris_plugin_info > chris_plugin_info.json
-```
+```a
 -->
