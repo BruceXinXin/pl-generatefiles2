@@ -63,11 +63,12 @@ docker build -t localhost/fnndsc/pl-generatefiles .
 ### Running
 
 Mount the source code `generate_files.py` into a container to try out changes without rebuild.
+If you want to customize output directory, change`DIR`field to your directory name.
 
 ```shell
 DIR=output&&docker run --rm -it --userns=host -u $(id -u):$(id -g) \
  -v $PWD/generate_files.py:/usr/local/lib/python3.10/site-packages/generate_files.py:ro \
--v $PWD/img:/img:ro -v $PWD/$DIR:/$DIR:rw localhost/fnndsc/pl-generatefiles generate_files /img /$DIR
+-v $PWD/$DIR:/$DIR:rw localhost/fnndsc/pl-generatefiles generate_files /$DIR
 ```
 
 <!--
