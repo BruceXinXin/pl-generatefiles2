@@ -44,8 +44,7 @@ input data, and a directory where to create output data.
 First, create the input directory and move input data into it.
 
 ```shell
-mkdir incoming/ outgoing/
-mv some.dat other.dat incoming/
+mkdir outgoing/
 singularity exec docker://fnndsc/pl-generatefiles:latest generate_files [--args] outgoing/
 ```
 
