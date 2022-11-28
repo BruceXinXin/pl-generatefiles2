@@ -24,7 +24,7 @@ setup(
     description='A ChRIS plugin to generate files',
     author='FNNDSC',
     author_email='dev@babyMRI.org',
-    url='https://github.com/BruceXinXin/pl-generatefiles',
+    url='https://github.com/BruceXinXin/pl-generatefiles2',
     py_modules=['generate_files', 'loguru'],
     install_requires=['chris_plugin'],
     license='MIT',
